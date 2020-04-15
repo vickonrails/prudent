@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap");
+
+/* General */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --nav-shadow: 0 1px 4px rgba(178, 178, 178, 0.25);
+  --black: #000;
+  --black-light: #050505;
+  --black-lighter: #4d4d4d;
+  --white: #fff;
+  --prim-color: #f15c41;
+  --border-radius: 4px;
+  --grey-background: #f1ecec;
+  --prim-color-1: #f1e5e3;
+}
+
+html {
+  font-size: 18px;
+  font-family: "Rubik", sans-serif, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: underline;
+  color: var(--prim-color);
+  position: relative;
+  display: block;
+}
+.with-arrow::after {
+  content: "";
+  background-image: url("./imgs/chevrons-right.svg");
+  height: 20px;
+  width: 20px;
+  top: 3px;
+  position: absolute;
+  display: inline-block;
+  margin-left: 0.3em;
+  /* background: var(--prim-color); */
+}
+p,
+ul,
+ol,
+li {
+  margin-bottom: 1em;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 900;
+  line-height: 1.13;
+  margin-bottom: 0.4em;
+  color: currentColor;
+}
+h1 {
+  font-size: 2.5em;
+  letter-spacing: 0;
+}
+h2 {
+  font-size: 1.88em;
+}
+img {
+  width: 100%;
+}
+body {
+  margin-top: 4em;
+}
+hr {
+  color: #e5e5e5;
+  background: #e5e5e5;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+.container {
+  padding: 0 3%;
+}
+.nav {
+  padding: 0.625em 0;
+  box-shadow: var(--nav-shadow);
+  position: fixed;
+  width: 100%;
+  background: var(--white);
+  top: 0;
+}
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+}
+.nav__right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav__left {
+  display: flex;
+  align-items: center;
+}
+.nav__logo {
+  margin-right: 4px;
+}
+.nav__hamburger {
+  height: 30px;
+  width: 30px;
+  border: 0;
+  position: relative;
+  background: inherit;
+}
+.nav__hamburger::after,
+.nav__hamburger::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  display: block;
+  width: 100%;
+  margin-right: 1px;
+  background: var(--black);
+}
+.nav__hamburger::after {
+  top: 30%;
+}
+.nav__hamburger::before {
+  bottom: 30%;
+}
+.nav__mobile-nav {
+  display: none;
+}
+body.mobile-nav-open .nav__mobile-nav {
+  display: block;
+}
+
+/* header */
+.header__container {
+  padding-top: 3.125em;
+}
+
+/* utilty */
+.highlighted {
+  color: var(--prim-color);
+}
+.grey-background {
+  background: var(--grey-background);
+}
+.text-centered {
+  text-align: center;
+}
+.prim-background {
+  background: var(--prim-color);
+  color: var(--white);
+}
+
+/* btns */
+.btn {
+  background: var(--prim-color);
+  color: var(--white);
+  border: 0;
+  font: inherit;
+  border-radius: var(--border-radius);
+  padding: 0.8em 1em;
+  display: block;
+  line-height: 1;
+}
+.btn-group {
+  display: flex;
+  margin-bottom: 1em;
+}
+.btn-group > .btn:not(:last-child) {
+  margin-right: 0.5em;
+}
+.btn.btn-secondary {
+  color: var(--prim-color);
+  border: 1px solid var(--prim-color);
+  background: var(--white);
+}
+
+/* sections */
+.section {
+  padding: 2.5em 0 1.25em;
+}
+.section__heading-small {
+  font-size: 0.88rem;
+  display: block;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 0.62em;
+}
+.section__text-content {
+  margin-bottom: 1.25em;
+}
+.section__text {
+  margin-bottom: 0.5em;
+}
+.features__icon {
+  background: var(--prim-color-1);
+  height: 50px;
+  width: 50px;
+  display: flex;
+  border-radius: 100%;
+  margin: 0 auto 0.75em;
+}
+.features__feather-video {
+  margin: auto;
+  stroke-width: 2px;
+  color: var(--prim-color);
+}
+.features__feature {
+  margin-bottom: 2.5em;
+}
+.cta {
+  color: #fff;
+}
+
+/* Footer */
+.footer ul,
+.footer ol {
+  list-style: none;
+}
+.footer__links-heading {
+  font-weight: bold;
+}
+.footer__links-item {
+  margin-bottom: 0.5em;
+}
+.footer__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer__links {
+  flex: 1 1 150px;
+  margin-bottom: 2.5em;
+}
+.footer__links-heading {
+  margin-bottom: 0.3em;
+}
+.footer__link {
+  font-size: 0.88em;
+  text-decoration: none;
+  color: var(--black-light);
+}
+.footer__links-list {
+  margin-bottom: 0.2em;
+}
