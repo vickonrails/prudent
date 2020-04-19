@@ -25,15 +25,45 @@
         </div>
         <div class="nav__right">
           <button class="nav__hamburger"></button>
+          <ul class="nav__nav-desktop">
+            <li class="nav__desktop-item">
+              <a href="#" class="nav__desktop-link">Features</a>
+            </li>
+            <li class="nav__desktop-item">
+              <a href="#" class="nav__desktop-link">Pricing</a>
+            </li>
+            <li class="nav__desktop-item">
+              <a href="#" class="btn btn-secondary nav__desktop-link"
+                >Play Store</a
+              >
+            </li>
+            <li class="nav__desktop-item">
+              <a href="#" class="btn nav__desktop-link">App Store</a>
+            </li>
+          </ul>
         </div>
       </div>
 
       <div class="nav__mobile-nav">
-        <ul class="nav__mobile-links">
-          <li class="nav__mobiile-item">
-            <a href="#" class="nav__mobile-link">Home</a>
-          </li>
-        </ul>
+        <div class="nav__mobile-nav container">
+          <ul class="nav__mobile-links">
+            <li class="nav__mobiile-item">
+              <a href="#" class="nav__mobile-link">Home</a>
+            </li>
+            <li class="nav__mobiile-item">
+              <a href="#" class="nav__mobile-link">App Store</a>
+            </li>
+            <li class="nav__mobiile-item">
+              <a href="#" class="nav__mobile-link">Play Store</a>
+            </li>
+            <li class="nav__mobiile-item">
+              <a href="#" class="nav__mobile-link">Features</a>
+            </li>
+            <li class="nav__mobiile-item">
+              <a href="#" class="nav__mobile-link">Pricing</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
     <header class="header">
@@ -43,18 +73,18 @@
             Fast, Secure & Performant Conferencing For
             <span class="highlighted">Families</span>
           </h1>
-          <p class="header__text">
+          <p class="header__text-text">
             Prudent is a mobile app for connecting with loved ones and families
             in real time. Get it on your platform’s store.
           </p>
 
           <div class="btn-group">
-            <button class="btn">
+            <a href="" class="btn">
               App Store
-            </button>
-            <button class="btn btn-secondary">
+            </a>
+            <a href="" class="btn btn-secondary">
               Play Store
-            </button>
+            </a>
           </div>
         </div>
         <div class="header__img">
@@ -68,7 +98,7 @@
           <div class="section__text-content">
             <h2 class="section__heading">
               <small class="section__heading-small">WHY YOU SHOULD CARE</small>
-              Lightening Fast
+              Lightening Fast Data Transfer
             </h2>
             <p class="section__text">
               Our architecture is built using the most suitable technologies for
@@ -89,7 +119,7 @@
           <div class="section__text-content">
             <h2 class="section__heading">
               <small class="section__heading-small">WHY YOU SHOULD CARE</small>
-              Privacy & Security
+              Privacy & Security embedded
             </h2>
             <p class="section__text">
               Our company is at the centre of privacy and security ethics. No
@@ -171,19 +201,41 @@
             <article class="features__feature text-centered">
               <div class="features__icon">
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
                   width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
+                  height="20"
+                  viewBox="0 0 24 20"
                   fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="feather feather-video features__feather-video"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="features__feather-video"
                 >
-                  <polygon points="23 7 16 12 23 17 23 7"></polygon>
-                  <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                  <path
+                    d="M17 18.0359V16.143C17 15.1389 16.5786 14.176 15.8284 13.466C15.0783 12.756 14.0609 12.3572 13 12.3572H5C3.93913 12.3572 2.92172 12.756 2.17157 13.466C1.42143 14.176 1 15.1389 1 16.143V18.0359"
+                    stroke="#F15C41"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M9 8.57153C11.2091 8.57153 13 6.87659 13 4.78577C13 2.69495 11.2091 1 9 1C6.79086 1 5 2.69495 5 4.78577C5 6.87659 6.79086 8.57153 9 8.57153Z"
+                    stroke="#F15C41"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M23 18.0359V16.1431C22.9993 15.3043 22.7044 14.4895 22.1614 13.8266C21.6184 13.1636 20.8581 12.6902 20 12.4805"
+                    stroke="#F15C41"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M16 1.12305C16.8604 1.33155 17.623 1.80515 18.1676 2.46919C18.7122 3.13322 19.0078 3.94992 19.0078 4.79053C19.0078 5.63113 18.7122 6.44783 18.1676 7.11187C17.623 7.7759 16.8604 8.2495 16 8.45801"
+                    stroke="#F15C41"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                 </svg>
               </div>
               <h3 class="features__feature-heading">Mentions</h3>
@@ -197,19 +249,20 @@
             <article class="features__feature text-centered">
               <div class="features__icon">
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
+                  width="22"
+                  height="20"
+                  viewBox="0 0 22 20"
                   fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="feather feather-video features__feather-video"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="features__feather-video"
                 >
-                  <polygon points="23 7 16 12 23 17 23 7"></polygon>
-                  <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                  <path
+                    d="M21 9.51807H17L14 18.0361L8 1L5 9.51807H1"
+                    stroke="#F15C41"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                 </svg>
               </div>
               <h3 class="features__feature-heading">Mentions</h3>
@@ -281,14 +334,15 @@
             Don't Be Left Out
           </h2>
           <p>Join Hundreds of families stay together anywhere in the world</p>
-        </div>
-        <div class="btn-group">
-          <button class="btn">
-            App Store
-          </button>
-          <button class="btn btn-secondary">
-            Play Store
-          </button>
+
+          <div class="btn-group">
+            <a href="#" class="btn">
+              App Store
+            </a>
+            <a href="#" class="btn btn-secondary">
+              Play Store
+            </a>
+          </div>
         </div>
       </section>
     </main>
