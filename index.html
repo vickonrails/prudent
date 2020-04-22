@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>Prudent - Landing page for mobile application</title>
   </head>
   <body>
@@ -24,7 +25,7 @@
           <span class="nav__logo-name">Prudent</span>
         </div>
         <div class="nav__right">
-          <button class="nav__hamburger"></button>
+          <button class="nav__hamburger" aria-label="Menu"></button>
           <ul class="nav__nav-desktop">
             <li class="nav__desktop-item">
               <a href="#" class="nav__desktop-link">Features</a>
@@ -88,18 +89,25 @@
           </div>
         </div>
         <div class="header__img">
-          <img
-          lazy
-            src="./imgs/Group.png"
-            alt="Mobile Image"
-            class="img-screen-ui"
-          />
+          <picture>
+            <source
+              media="(max-width: 560px)"
+              srcset="./imgs/header-ui-mobile.png"
+            />
+            <img
+              width="500px"
+              lazy
+              src="./imgs/header-ui-desktop.png"
+              alt="Mobile Image"
+              class="img-screen-ui"
+            />
+          </picture>
         </div>
       </div>
     </header>
     <main>
       <section class="section speed grey-background">
-        <div class="section__container container">
+        <div class="section__container container" data-aos="fade-up">
           <div class="section__text-content">
             <h2 class="section__heading">
               <small class="section__heading-small">WHY YOU SHOULD CARE</small>
@@ -114,13 +122,19 @@
             >
           </div>
           <div class="section__img">
-            <img lazy src="./imgs/design (2).png" alt="Mobile Image" />
+            <picture>
+              <source
+                media="(max-width : 560px)"
+                srcset="./imgs/speed-ui-mobile.png"
+              />
+              <img lazy src="./imgs/speed-ui-desktop.png" alt="Mobile Image" />
+            </picture>
           </div>
         </div>
       </section>
 
       <section class="section privacy">
-        <div class="section__container container">
+        <div class="section__container container" data-aos="fade-up">
           <div class="section__text-content">
             <h2 class="section__heading">
               <small class="section__heading-small">WHY YOU SHOULD CARE</small>
@@ -136,7 +150,17 @@
             >
           </div>
           <div class="section__img">
-            <img lazy src="./imgs/design (3).png" alt="Mobile Image" />
+            <picture>
+              <source
+                media="(max-width : 560px)"
+                srcset="./imgs/privacy-ui-mobile.png"
+              />
+              <img
+                lazy
+                src="./imgs/privacy-ui-desktop.png"
+                alt="Mobile Image"
+              />
+            </picture>
           </div>
         </div>
       </section>
@@ -151,7 +175,7 @@
           </h2>
 
           <section class="features">
-            <article class="features__feature text-centered">
+            <article class="features__feature text-centered" data-aos="fade-up">
               <div class="features__icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -177,7 +201,7 @@
               <a href="#" class="features__cta with-arrow">Try it Here</a>
             </article>
 
-            <article class="features__feature text-centered">
+            <article class="features__feature text-centered" data-aos="fade-up">
               <div class="features__icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -203,7 +227,7 @@
               <a href="#" class="features__cta with-arrow">Try it Here</a>
             </article>
 
-            <article class="features__feature text-centered">
+            <article class="features__feature text-centered" data-aos="fade-up">
               <div class="features__icon">
                 <svg
                   width="24"
@@ -251,7 +275,7 @@
               <a href="#" class="features__cta with-arrow">Try it Here</a>
             </article>
 
-            <article class="features__feature text-centered">
+            <article class="features__feature text-centered" data-aos="fade-up">
               <div class="features__icon">
                 <svg
                   width="22"
@@ -278,7 +302,7 @@
               <a href="#" class="features__cta with-arrow">Try it Here</a>
             </article>
 
-            <article class="features__feature text-centered">
+            <article class="features__feature text-centered" data-aos="fade-up">
               <div class="features__icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -304,7 +328,7 @@
               <a href="#" class="features__cta with-arrow">Try it Here</a>
             </article>
 
-            <article class="features__feature text-centered">
+            <article class="features__feature text-centered" data-aos="fade-up">
               <div class="features__icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -429,6 +453,44 @@
         </article>
       </section>
     </footer>
-    <script src="./script.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      var hamburger = document.querySelector(".nav__hamburger");
+      var body = document.querySelector("body");
+      var mobileNavigation = document.querySelector(".nav__mobile-nav");
+
+      AOS.init();
+
+      function toggleMobileNav(e) {
+        body.classList.toggle("mobile-nav-open");
+      }
+
+      function isModalOpen() {
+        return body.classList.contains("mobile-nav-open") ? true : false;
+      }
+
+      // FIXME: Find a better way to close modal when body is clicked
+      function closeMobileMenu(e) {
+        console.log(
+          e.target.classList.contains("nav__mobiile-item") ||
+            e.target.classList.contains("nav__hamburger") ||
+            e.target.classList.contains("nav__container")
+        );
+        if (
+          isModalOpen() &&
+          (e.target.classList.contains("nav__mobiile-item") ||
+            e.target.classList.contains("nav__hamburger"))
+        )
+          return;
+
+        body.classList.remove("mobile-nav-open");
+      }
+
+      window.addEventListener("click", closeMobileMenu);
+
+      hamburger.addEventListener("click", toggleMobileNav);
+    </script>
   </body>
 </html>

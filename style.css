@@ -100,7 +100,9 @@ img {
 }
 body {
   margin-top: 4em;
+  overflow-x: hidden;
 }
+
 hr {
   border: 0;
   border-bottom: 1px solid #ffe4df;
