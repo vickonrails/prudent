@@ -19,6 +19,8 @@
   --black-lighter: #4d4d4d;
   --white: #fff;
   --prim-color: #f15c41;
+  --prim-color-shade1: #f17c41;
+  --prim-color-shade2: #f16d41;
   --border-radius: 4px;
   --grey-background: #f1ecec;
   --prim-color-1: #f1e5e3;
@@ -231,12 +233,61 @@ body.mobile-nav-open .nav__mobile-nav {
   line-height: 1;
   cursor: pointer;
 }
+.btn:hover {
+  text-decoration: none;
+}
 .btn-group {
   display: flex;
+  justify-content: space-between;
   margin-bottom: 1em;
+  max-width: 13.5em;
+}
+
+.patterns-left::after,
+.patterns-left::before,
+.patterns-right::after,
+.patterns-right::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform-origin: left center;
+  width: 10em;
+  height: 6.25em;
+  z-index: -10;
+}
+.patterns-left,
+.patterns-right {
+  position: absolute;
+  height: 6em;
+  width: 12.5em;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -10%;
+  display: block;
+}
+.patterns-left {
+  left: -10%;
+}
+.patterns-right {
+  transform: translateY(-50%) rotate(180deg);
+}
+.patterns-right::after,
+.patterns-right::before {
+  background: #fff;
+}
+
+.patterns-left::before,
+.patterns-right::before {
+  background: var(--prim-color-shade1);
+  transform: translateY(-50%) rotate(35deg);
+}
+.patterns-left::after,
+.patterns-right::after {
+  background: var(--prim-color-shade2);
+  transform: translateY(-50%) rotate(-35deg);
 }
 .cta .btn-group {
-  max-width: 250px;
   margin: 0 auto;
 }
 .cta .btn {
@@ -264,6 +315,10 @@ body.mobile-nav-open .nav__mobile-nav {
 }
 .section__text-content {
   margin-bottom: 1.25em;
+}
+.cta__container {
+  z-index: 1;
+  position: relative;
 }
 .section__text {
   margin-bottom: 0.5em;
@@ -312,6 +367,8 @@ body.mobile-nav-open .nav__mobile-nav {
 .cta {
   color: #fff;
   padding: 4em 0;
+  overflow: hidden;
+  position: relative;
 }
 
 /* Footer */
@@ -389,6 +446,17 @@ body.mobile-nav-open .nav__mobile-nav {
   }
   .speed .section__img {
     margin-right: 1.5em;
+  }
+  .img-screen-ui {
+    width: 500px;
+    display: block;
+    margin: 0 auto;
+  }
+  .patterns-left {
+    left: 0;
+  }
+  .patterns-right {
+    right: 0;
   }
 }
 
