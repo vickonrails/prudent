@@ -1,5 +1,5 @@
 # Prudent
-Beautiful, Fast landing page template for your next mobile project - [Live Preview](prudent.netlify.com)
+Beautiful, Fast landing page template for your next mobile project - [Live Preview](https://prudent.netlify.com)
 
 ## Features
 - Almost 0 JavaScript
