@@ -8,7 +8,13 @@ Beautiful, Fast landing page template for your next mobile project - [Live Previ
 - Optimized images
 - Lighthouse score of 98
 
+## Todo
+- [ ] Animate hamburger & mobile navigation
+- [ ] Add credits for UI screenshots
+- [ ] Use appropriate Apple/Google buttons
+
 ## Contributing
 This is a WIP, you can report issues you find or send a pull request to fix them.
+
 
 Happy hacking 🎉🎉🎉
