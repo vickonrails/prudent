@@ -131,9 +131,14 @@ hr {
   justify-content: center;
   align-items: center;
 }
-.nav__left {
+.nav__left a {
   display: flex;
+  text-decoration: none;
   align-items: center;
+}
+.nav__left a:hover,
+.nav__left a:active {
+  text-decoration: underline;
 }
 .nav__logo {
   margin-right: 4px;
@@ -242,7 +247,7 @@ body.mobile-nav-open .nav__mobile-nav {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1em;
-  max-width: 13.5em;
+  max-width: 13.7em;
 }
 
 .patterns-left::after,

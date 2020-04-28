@@ -1,7 +1,9 @@
 # Prudent
+
 Beautiful, Fast landing page template for your next mobile project - [Live Preview](https://prudent.netlify.com)
 
 ## Features
+
 - Almost 0 JavaScript
 - Sleek design
 - Highly responsive
@@ -9,12 +11,13 @@ Beautiful, Fast landing page template for your next mobile project - [Live Previ
 - Lighthouse score of 98
 
 ## Todo
+
 - [ ] Animate hamburger & mobile navigation
-- [ ] Add credits for UI screenshots
-- [ ] Use appropriate Apple/Google buttons
+- [x] Add credits for UI screenshots
+- [x] Make top left section a link
 
 ## Contributing
-This is a WIP, you can report issues you find or send a pull request to fix them.
 
+This is a WIP, you can report issues you find or send a pull request to fix them.
 
 Happy hacking 🎉🎉🎉
